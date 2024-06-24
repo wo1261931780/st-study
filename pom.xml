@@ -14,6 +14,12 @@
 	<name>st-plus-study</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
+	<!--maven 命令的补充知识-->
+	<!--clean 命令清空 target 目录内文件-->
+	<!--maven 版本冲突-->
+	<!--一般是间接依赖导致的-->
+	<!--要么是用 exclude 来排除冲突的依赖，要么是升级依赖版本来解决冲突。-->
+	<!--也可以通过dependencyManagement 来统一管理依赖版本，避免版本冲突。-->
 	<licenses>
 		<license/>
 	</licenses>
