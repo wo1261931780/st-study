@@ -1,1 +1,0 @@
-# st-plus-study
