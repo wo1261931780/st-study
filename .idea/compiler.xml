@@ -2,7 +2,12 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
-      <profile name="Annotation profile for st-base-study" enabled="true">
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+      </profile>
+      <profile name="Annotation profile for st-study-content" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -10,12 +15,19 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.8/lombok-1.18.8.jar" />
         </processorPath>
         <module name="st-base-study" />
+        <module name="st-study-content-api" />
+        <module name="st-study-content-model" />
+        <module name="st-study-content-service" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="st-base-study" options="-parameters" />
+      <module name="st-study-content" options="-parameters" />
+      <module name="st-study-content-api" options="-parameters" />
+      <module name="st-study-content-model" options="-parameters" />
+      <module name="st-study-content-service" options="-parameters" />
       <module name="st-study-parent" options="-parameters" />
     </option>
   </component>

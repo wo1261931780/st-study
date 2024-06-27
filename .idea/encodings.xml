@@ -3,6 +3,14 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/st-base-study/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/st-base-study/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/st-study-content/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/st-study-content/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/st-study-content/st-study-content-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/st-study-content/st-study-content-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/st-study-content/st-study-content-model/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/st-study-content/st-study-content-model/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/st-study-content/st-study-content-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/st-study-content/st-study-content-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/st-study-parent/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/st-study-parent/src/main/resources" charset="UTF-8" />
   </component>

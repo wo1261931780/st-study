@@ -6,6 +6,7 @@
       <list>
         <option value="$PROJECT_DIR$/st-study-parent/pom.xml" />
         <option value="$PROJECT_DIR$/st-base-study/pom.xml" />
+        <option value="$PROJECT_DIR$/st-study-content/pom.xml" />
       </list>
     </option>
   </component>
