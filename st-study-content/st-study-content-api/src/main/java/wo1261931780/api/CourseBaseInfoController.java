@@ -1,8 +1,9 @@
 package wo1261931780.api;
 
+import baseRun.model.PageParams;
 import baseRun.model.ShowResult;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import wo1261931780.model.dto.QueryCourseParamsDto;
 import wo1261931780.model.po.CourseBase;
@@ -18,9 +19,9 @@ import wo1261931780.model.po.CourseBase;
  */
 @RestController
 public class CourseBaseInfoController {
-
-	@RequestMapping("/course/list")
-	public ShowResult<CourseBase> list(@RequestBody QueryCourseParamsDto queryCourseParams) {
+	// RestController就相当于 controller 和 responseBodu
+	@PostMapping("/course/list")
+	public ShowResult<CourseBase> list(PageParams pageParams, @RequestBody QueryCourseParamsDto queryCourseParams) {
 
 		return null;
 	}
