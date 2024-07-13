@@ -7,6 +7,7 @@
 		<groupId>wo1261931780</groupId>
 		<artifactId>st-study-content</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
+		<!--因为和模块的目录是同级的，所以不需要路径-->
 	</parent>
 
 	<artifactId>st-study-content-model</artifactId>
