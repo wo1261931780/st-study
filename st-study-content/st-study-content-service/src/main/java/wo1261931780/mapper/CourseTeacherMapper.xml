@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="wo1261931780.mapper.CourseTeacherMapper">
+  <resultMap id="BaseResultMap" type="wo1261931780.model.po.CourseTeacher">
+    <!--@mbg.generated-->
+    <!--@Table course_teacher-->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="course_id" jdbcType="BIGINT" property="courseId" />
+    <result column="teacher_name" jdbcType="VARCHAR" property="teacherName" />
+    <result column="position" jdbcType="VARCHAR" property="position" />
+    <result column="introduction" jdbcType="VARCHAR" property="introduction" />
+    <result column="photograph" jdbcType="VARCHAR" property="photograph" />
+    <result column="create_date" jdbcType="TIMESTAMP" property="createDate" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, course_id, teacher_name, `position`, introduction, photograph, create_date
+  </sql>
+  <insert id="insertOrUpdate" keyColumn="id" keyProperty="id" parameterType="wo1261931780.model.po.CourseTeacher" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into course_teacher
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      course_id,
+      teacher_name,
+      `position`,
+      introduction,
+      photograph,
+      create_date,
+    </trim>
+    values
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      #{courseId,jdbcType=BIGINT},
+      #{teacherName,jdbcType=VARCHAR},
+      #{position,jdbcType=VARCHAR},
+      #{introduction,jdbcType=VARCHAR},
+      #{photograph,jdbcType=VARCHAR},
+      #{createDate,jdbcType=TIMESTAMP},
+    </trim>
+    on duplicate key update 
+    <trim suffixOverrides=",">
+      <if test="id != null">
+        id = #{id,jdbcType=BIGINT},
+      </if>
+      course_id = #{courseId,jdbcType=BIGINT},
+      teacher_name = #{teacherName,jdbcType=VARCHAR},
+      `position` = #{position,jdbcType=VARCHAR},
+      introduction = #{introduction,jdbcType=VARCHAR},
+      photograph = #{photograph,jdbcType=VARCHAR},
+      create_date = #{createDate,jdbcType=TIMESTAMP},
+    </trim>
+  </insert>
+  <insert id="insertOrUpdateSelective" keyColumn="id" keyProperty="id" parameterType="wo1261931780.model.po.CourseTeacher" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into course_teacher
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="courseId != null">
+        course_id,
+      </if>
+      <if test="teacherName != null">
+        teacher_name,
+      </if>
+      <if test="position != null">
+        `position`,
+      </if>
+      <if test="introduction != null">
+        introduction,
+      </if>
+      <if test="photograph != null">
+        photograph,
+      </if>
+      <if test="createDate != null">
+        create_date,
+      </if>
+    </trim>
+    values
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="courseId != null">
+        #{courseId,jdbcType=BIGINT},
+      </if>
+      <if test="teacherName != null">
+        #{teacherName,jdbcType=VARCHAR},
+      </if>
+      <if test="position != null">
+        #{position,jdbcType=VARCHAR},
+      </if>
+      <if test="introduction != null">
+        #{introduction,jdbcType=VARCHAR},
+      </if>
+      <if test="photograph != null">
+        #{photograph,jdbcType=VARCHAR},
+      </if>
+      <if test="createDate != null">
+        #{createDate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+    on duplicate key update 
+    <trim suffixOverrides=",">
+      <if test="id != null">
+        id = #{id,jdbcType=BIGINT},
+      </if>
+      <if test="courseId != null">
+        course_id = #{courseId,jdbcType=BIGINT},
+      </if>
+      <if test="teacherName != null">
+        teacher_name = #{teacherName,jdbcType=VARCHAR},
+      </if>
+      <if test="position != null">
+        `position` = #{position,jdbcType=VARCHAR},
+      </if>
+      <if test="introduction != null">
+        introduction = #{introduction,jdbcType=VARCHAR},
+      </if>
+      <if test="photograph != null">
+        photograph = #{photograph,jdbcType=VARCHAR},
+      </if>
+      <if test="createDate != null">
+        create_date = #{createDate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+</mapper>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="wo1261931780.mapper.CourseCategoryMapper">
+  <resultMap id="BaseResultMap" type="wo1261931780.model.po.CourseCategory">
+    <!--@mbg.generated-->
+    <!--@Table course_category-->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="label" jdbcType="VARCHAR" property="label" />
+    <result column="parentid" jdbcType="VARCHAR" property="parentid" />
+    <result column="is_show" jdbcType="TINYINT" property="isShow" />
+    <result column="orderby" jdbcType="INTEGER" property="orderby" />
+    <result column="is_leaf" jdbcType="TINYINT" property="isLeaf" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, `name`, `label`, parentid, is_show, orderby, is_leaf
+  </sql>
+  <insert id="insertOrUpdate" parameterType="wo1261931780.model.po.CourseCategory">
+    <!--@mbg.generated-->
+    insert into course_category
+    (id, `name`, `label`, parentid, is_show, orderby, is_leaf)
+    values
+    (#{id,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{label,jdbcType=VARCHAR}, #{parentid,jdbcType=VARCHAR}, 
+      #{isShow,jdbcType=TINYINT}, #{orderby,jdbcType=INTEGER}, #{isLeaf,jdbcType=TINYINT}
+      )
+    on duplicate key update 
+    id = #{id,jdbcType=VARCHAR}, 
+    `name` = #{name,jdbcType=VARCHAR}, 
+    `label` = #{label,jdbcType=VARCHAR}, 
+    parentid = #{parentid,jdbcType=VARCHAR}, 
+    is_show = #{isShow,jdbcType=TINYINT}, 
+    orderby = #{orderby,jdbcType=INTEGER}, 
+    is_leaf = #{isLeaf,jdbcType=TINYINT}
+  </insert>
+  <insert id="insertOrUpdateSelective" parameterType="wo1261931780.model.po.CourseCategory">
+    <!--@mbg.generated-->
+    insert into course_category
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="name != null">
+        `name`,
+      </if>
+      <if test="label != null">
+        `label`,
+      </if>
+      <if test="parentid != null">
+        parentid,
+      </if>
+      <if test="isShow != null">
+        is_show,
+      </if>
+      <if test="orderby != null">
+        orderby,
+      </if>
+      <if test="isLeaf != null">
+        is_leaf,
+      </if>
+    </trim>
+    values
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="label != null">
+        #{label,jdbcType=VARCHAR},
+      </if>
+      <if test="parentid != null">
+        #{parentid,jdbcType=VARCHAR},
+      </if>
+      <if test="isShow != null">
+        #{isShow,jdbcType=TINYINT},
+      </if>
+      <if test="orderby != null">
+        #{orderby,jdbcType=INTEGER},
+      </if>
+      <if test="isLeaf != null">
+        #{isLeaf,jdbcType=TINYINT},
+      </if>
+    </trim>
+    on duplicate key update 
+    <trim suffixOverrides=",">
+      <if test="id != null">
+        id = #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        `name` = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="label != null">
+        `label` = #{label,jdbcType=VARCHAR},
+      </if>
+      <if test="parentid != null">
+        parentid = #{parentid,jdbcType=VARCHAR},
+      </if>
+      <if test="isShow != null">
+        is_show = #{isShow,jdbcType=TINYINT},
+      </if>
+      <if test="orderby != null">
+        orderby = #{orderby,jdbcType=INTEGER},
+      </if>
+      <if test="isLeaf != null">
+        is_leaf = #{isLeaf,jdbcType=TINYINT},
+      </if>
+    </trim>
+  </insert>
+</mapper>

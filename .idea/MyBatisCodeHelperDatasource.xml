@@ -7,7 +7,7 @@
         <option name="controllerTemplateString" value="&#10;#* @vtlvariable name=&quot;tableName&quot; type=&quot;java.lang.String&quot; *#&#10;#* @vtlvariable name=&quot;entityPackageName&quot; type=&quot;java.lang.String&quot; *#&#10;#* @vtlvariable name=&quot;entityClassName&quot; type=&quot;java.lang.String&quot; *#&#10;#* @vtlvariable name=&quot;servicePackageName&quot; type=&quot;java.lang.String&quot; *#&#10;#* @vtlvariable name=&quot;serviceInterfacePackage&quot; type=&quot;java.lang.String&quot; *#&#10;#* @vtlvariable name=&quot;serviceClassName&quot; type=&quot;java.lang.String&quot; *#&#10;#* @vtlvariable name=&quot;serviceInterfaceClassName&quot; type=&quot;java.lang.String&quot; *#&#10;#* @vtlvariable name=&quot;mapperPackageName&quot; type=&quot;java.lang.String&quot; *#&#10;#* @vtlvariable name=&quot;mapperClassName&quot; type=&quot;java.lang.String&quot; *#&#10;#* @vtlvariable name=&quot;controllerPackage&quot; type=&quot;java.lang.String&quot; *#&#10;#* @vtlvariable name=&quot;tableRemark&quot; type=&quot;java.lang.String&quot; *#&#10;#* @vtlvariable name=&quot;myDate&quot; type=&quot;java.util.Date&quot; *#&#10;#* @vtlvariable name=&quot;simpleDateFormat&quot; type=&quot;java.text.SimpleDateFormat&quot; *#&#10;package $!{controllerPackage};&#10;import $!{entityPackageName}.$!{entityClassName};&#10;###set($realServiceName = $!{serviceClassName}+'Impl')&#10;import $!{servicePackageName}.$!{serviceClassName};&#10;import org.springframework.web.bind.annotation.*;&#10;&#10;#set($serviceFirstLower = $!{serviceClassName.substring(0,1).toLowerCase()}+$!{serviceClassName.substring(1,$!{serviceClassName.length()})})&#10;import org.springframework.beans.factory.annotation.Autowired;&#10;&#10;/**&#10;* $!{tableRemark}($!{tableName})表控制层&#10;*&#10;* @author xxxxx&#10;*/&#10;@RestController&#10;@RequestMapping(&quot;/$!{tableName}&quot;)&#10;public class $!{entityClassName}Controller {&#10;/**&#10;* 服务对象&#10;*/&#10;    @Autowired&#10;    private $!{serviceClassName} $!{serviceFirstLower};&#10;&#10;    /**&#10;    * 通过主键查询单条数据&#10;    *&#10;    * @param id 主键&#10;    * @return 单条数据&#10;    */&#10;    @GetMapping(&quot;selectOne&quot;)&#10;    public $!{entityClassName} selectOne(Integer id) {&#10;    return $!{serviceFirstLower}.selectByPrimaryKey(id);&#10;    }&#10;&#10;}" />
         <option name="insertOnDuplicateKey" value="true" />
         <option name="javaMapperPackage" value="wo1261931780.model.dto" />
-        <option name="javaMapperPath" value="$PROJECT_DIR$/st-base-study/src/main/java" />
+        <option name="javaMapperPath" value="$PROJECT_DIR$/st-study-content/st-study-content-service/src/main/java/wo1261931780/mapper" />
         <option name="javaModelPackage" value="wo1261931780.model.po" />
         <option name="javaModelPath" value="$PROJECT_DIR$/st-study-content/st-study-content-model/src/main/java/wo1261931780/model/po" />
         <option name="lastDatabaseCrudChooseModuleName" value="st-base-study" />
@@ -22,13 +22,13 @@
               <value>
                 <UserPackageAndPathInfoByModule>
                   <option name="javaMapperPackage" value="wo1261931780.model.dto" />
-                  <option name="javaMapperPath" value="$PROJECT_DIR$/st-base-study/src/main/java" />
+                  <option name="javaMapperPath" value="$PROJECT_DIR$/st-study-content/st-study-content-service/src/main/java/wo1261931780/mapper" />
                   <option name="javaModelPacakge" value="wo1261931780.model.po" />
                   <option name="javaModelPath" value="$PROJECT_DIR$/st-study-content/st-study-content-model/src/main/java/wo1261931780/model/po" />
                   <option name="javaServiceInterfacePath" value="$PROJECT_DIR$/st-base-study/src/main/java" />
                   <option name="javaServicePath" value="$PROJECT_DIR$/st-base-study/src/main/java" />
                   <option name="xmlPackage" value="wo1261931780.model.dto" />
-                  <option name="xmlPath" value="$PROJECT_DIR$/st-base-study/src/main/resources" />
+                  <option name="xmlPath" value="$PROJECT_DIR$/st-study-content/st-study-content-service/src/main/java/wo1261931780/mapper" />
                 </UserPackageAndPathInfoByModule>
               </value>
             </entry>
@@ -41,11 +41,10 @@
               <value>
                 <TableGenerateConfig>
                   <option name="generatedKey" value="id" />
+                  <option name="insertOnDuplicateKey" value="true" />
                   <option name="javaModelName" value="CourseBase" />
                   <option name="moduleName" value="st-base-study" />
                   <option name="mybatisplusIdType" value="AUTO" />
-                  <option name="sequenceColumn" value="" />
-                  <option name="sequenceId" value="" />
                   <option name="useActualColumnName" value="false" />
                 </TableGenerateConfig>
               </value>
@@ -136,7 +135,7 @@
         <option name="useSwagger" value="true" />
         <option name="userMybatisPlus" value="true" />
         <option name="xmlMapperPackage" value="wo1261931780.model.dto" />
-        <option name="xmlMapperPath" value="$PROJECT_DIR$/st-base-study/src/main/resources" />
+        <option name="xmlMapperPath" value="$PROJECT_DIR$/st-study-content/st-study-content-service/src/main/java/wo1261931780/mapper" />
       </ProjectProfile>
     </option>
   </component>

@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="wo1261931780.mapper.CoursePublishPreMapper">
+  <resultMap id="BaseResultMap" type="wo1261931780.model.po.CoursePublishPre">
+    <!--@mbg.generated-->
+    <!--@Table course_publish_pre-->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="company_id" jdbcType="BIGINT" property="companyId" />
+    <result column="company_name" jdbcType="VARCHAR" property="companyName" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="users" jdbcType="VARCHAR" property="users" />
+    <result column="tags" jdbcType="VARCHAR" property="tags" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="mt" jdbcType="VARCHAR" property="mt" />
+    <result column="mt_name" jdbcType="VARCHAR" property="mtName" />
+    <result column="st" jdbcType="VARCHAR" property="st" />
+    <result column="st_name" jdbcType="VARCHAR" property="stName" />
+    <result column="grade" jdbcType="VARCHAR" property="grade" />
+    <result column="teachmode" jdbcType="VARCHAR" property="teachmode" />
+    <result column="pic" jdbcType="VARCHAR" property="pic" />
+    <result column="description" jdbcType="LONGVARCHAR" property="description" />
+    <result column="market" jdbcType="LONGVARCHAR" property="market" />
+    <result column="teachplan" jdbcType="LONGVARCHAR" property="teachplan" />
+    <result column="teachers" jdbcType="LONGVARCHAR" property="teachers" />
+    <result column="create_date" jdbcType="TIMESTAMP" property="createDate" />
+    <result column="audit_date" jdbcType="TIMESTAMP" property="auditDate" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="charge" jdbcType="VARCHAR" property="charge" />
+    <result column="price" jdbcType="FLOAT" property="price" />
+    <result column="original_price" jdbcType="FLOAT" property="originalPrice" />
+    <result column="valid_days" jdbcType="INTEGER" property="validDays" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, company_id, company_name, `name`, users, tags, username, mt, mt_name, st, st_name, 
+    grade, teachmode, pic, description, market, teachplan, teachers, create_date, audit_date, 
+    `status`, remark, charge, price, original_price, valid_days
+  </sql>
+  <insert id="insertOrUpdate" parameterType="wo1261931780.model.po.CoursePublishPre">
+    <!--@mbg.generated-->
+    insert into course_publish_pre
+    (id, company_id, company_name, `name`, users, tags, username, mt, mt_name, st, st_name, 
+      grade, teachmode, pic, description, market, teachplan, teachers, create_date, audit_date, 
+      `status`, remark, charge, price, original_price, valid_days)
+    values
+    (#{id,jdbcType=BIGINT}, #{companyId,jdbcType=BIGINT}, #{companyName,jdbcType=VARCHAR}, 
+      #{name,jdbcType=VARCHAR}, #{users,jdbcType=VARCHAR}, #{tags,jdbcType=VARCHAR}, 
+      #{username,jdbcType=VARCHAR}, #{mt,jdbcType=VARCHAR}, #{mtName,jdbcType=VARCHAR}, 
+      #{st,jdbcType=VARCHAR}, #{stName,jdbcType=VARCHAR}, #{grade,jdbcType=VARCHAR}, 
+      #{teachmode,jdbcType=VARCHAR}, #{pic,jdbcType=VARCHAR}, #{description,jdbcType=LONGVARCHAR}, 
+      #{market,jdbcType=LONGVARCHAR}, #{teachplan,jdbcType=LONGVARCHAR}, #{teachers,jdbcType=LONGVARCHAR}, 
+      #{createDate,jdbcType=TIMESTAMP}, #{auditDate,jdbcType=TIMESTAMP}, #{status,jdbcType=VARCHAR}, 
+      #{remark,jdbcType=VARCHAR}, #{charge,jdbcType=VARCHAR}, #{price,jdbcType=FLOAT}, 
+      #{originalPrice,jdbcType=FLOAT}, #{validDays,jdbcType=INTEGER})
+    on duplicate key update 
+    id = #{id,jdbcType=BIGINT}, 
+    company_id = #{companyId,jdbcType=BIGINT}, 
+    company_name = #{companyName,jdbcType=VARCHAR}, 
+    `name` = #{name,jdbcType=VARCHAR}, 
+    users = #{users,jdbcType=VARCHAR}, 
+    tags = #{tags,jdbcType=VARCHAR}, 
+    username = #{username,jdbcType=VARCHAR}, 
+    mt = #{mt,jdbcType=VARCHAR}, 
+    mt_name = #{mtName,jdbcType=VARCHAR}, 
+    st = #{st,jdbcType=VARCHAR}, 
+    st_name = #{stName,jdbcType=VARCHAR}, 
+    grade = #{grade,jdbcType=VARCHAR}, 
+    teachmode = #{teachmode,jdbcType=VARCHAR}, 
+    pic = #{pic,jdbcType=VARCHAR}, 
+    description = #{description,jdbcType=LONGVARCHAR}, 
+    market = #{market,jdbcType=LONGVARCHAR}, 
+    teachplan = #{teachplan,jdbcType=LONGVARCHAR}, 
+    teachers = #{teachers,jdbcType=LONGVARCHAR}, 
+    create_date = #{createDate,jdbcType=TIMESTAMP}, 
+    audit_date = #{auditDate,jdbcType=TIMESTAMP}, 
+    `status` = #{status,jdbcType=VARCHAR}, 
+    remark = #{remark,jdbcType=VARCHAR}, 
+    charge = #{charge,jdbcType=VARCHAR}, 
+    price = #{price,jdbcType=FLOAT}, 
+    original_price = #{originalPrice,jdbcType=FLOAT}, 
+    valid_days = #{validDays,jdbcType=INTEGER}
+  </insert>
+  <insert id="insertOrUpdateSelective" parameterType="wo1261931780.model.po.CoursePublishPre">
+    <!--@mbg.generated-->
+    insert into course_publish_pre
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="companyId != null">
+        company_id,
+      </if>
+      <if test="companyName != null">
+        company_name,
+      </if>
+      <if test="name != null">
+        `name`,
+      </if>
+      <if test="users != null">
+        users,
+      </if>
+      <if test="tags != null">
+        tags,
+      </if>
+      <if test="username != null">
+        username,
+      </if>
+      <if test="mt != null">
+        mt,
+      </if>
+      <if test="mtName != null">
+        mt_name,
+      </if>
+      <if test="st != null">
+        st,
+      </if>
+      <if test="stName != null">
+        st_name,
+      </if>
+      <if test="grade != null">
+        grade,
+      </if>
+      <if test="teachmode != null">
+        teachmode,
+      </if>
+      <if test="pic != null">
+        pic,
+      </if>
+      <if test="description != null">
+        description,
+      </if>
+      <if test="market != null">
+        market,
+      </if>
+      <if test="teachplan != null">
+        teachplan,
+      </if>
+      <if test="teachers != null">
+        teachers,
+      </if>
+      <if test="createDate != null">
+        create_date,
+      </if>
+      <if test="auditDate != null">
+        audit_date,
+      </if>
+      <if test="status != null">
+        `status`,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+      <if test="charge != null">
+        charge,
+      </if>
+      <if test="price != null">
+        price,
+      </if>
+      <if test="originalPrice != null">
+        original_price,
+      </if>
+      <if test="validDays != null">
+        valid_days,
+      </if>
+    </trim>
+    values
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="companyId != null">
+        #{companyId,jdbcType=BIGINT},
+      </if>
+      <if test="companyName != null">
+        #{companyName,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="users != null">
+        #{users,jdbcType=VARCHAR},
+      </if>
+      <if test="tags != null">
+        #{tags,jdbcType=VARCHAR},
+      </if>
+      <if test="username != null">
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="mt != null">
+        #{mt,jdbcType=VARCHAR},
+      </if>
+      <if test="mtName != null">
+        #{mtName,jdbcType=VARCHAR},
+      </if>
+      <if test="st != null">
+        #{st,jdbcType=VARCHAR},
+      </if>
+      <if test="stName != null">
+        #{stName,jdbcType=VARCHAR},
+      </if>
+      <if test="grade != null">
+        #{grade,jdbcType=VARCHAR},
+      </if>
+      <if test="teachmode != null">
+        #{teachmode,jdbcType=VARCHAR},
+      </if>
+      <if test="pic != null">
+        #{pic,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null">
+        #{description,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="market != null">
+        #{market,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="teachplan != null">
+        #{teachplan,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="teachers != null">
+        #{teachers,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="createDate != null">
+        #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="auditDate != null">
+        #{auditDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="charge != null">
+        #{charge,jdbcType=VARCHAR},
+      </if>
+      <if test="price != null">
+        #{price,jdbcType=FLOAT},
+      </if>
+      <if test="originalPrice != null">
+        #{originalPrice,jdbcType=FLOAT},
+      </if>
+      <if test="validDays != null">
+        #{validDays,jdbcType=INTEGER},
+      </if>
+    </trim>
+    on duplicate key update 
+    <trim suffixOverrides=",">
+      <if test="id != null">
+        id = #{id,jdbcType=BIGINT},
+      </if>
+      <if test="companyId != null">
+        company_id = #{companyId,jdbcType=BIGINT},
+      </if>
+      <if test="companyName != null">
+        company_name = #{companyName,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        `name` = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="users != null">
+        users = #{users,jdbcType=VARCHAR},
+      </if>
+      <if test="tags != null">
+        tags = #{tags,jdbcType=VARCHAR},
+      </if>
+      <if test="username != null">
+        username = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="mt != null">
+        mt = #{mt,jdbcType=VARCHAR},
+      </if>
+      <if test="mtName != null">
+        mt_name = #{mtName,jdbcType=VARCHAR},
+      </if>
+      <if test="st != null">
+        st = #{st,jdbcType=VARCHAR},
+      </if>
+      <if test="stName != null">
+        st_name = #{stName,jdbcType=VARCHAR},
+      </if>
+      <if test="grade != null">
+        grade = #{grade,jdbcType=VARCHAR},
+      </if>
+      <if test="teachmode != null">
+        teachmode = #{teachmode,jdbcType=VARCHAR},
+      </if>
+      <if test="pic != null">
+        pic = #{pic,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null">
+        description = #{description,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="market != null">
+        market = #{market,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="teachplan != null">
+        teachplan = #{teachplan,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="teachers != null">
+        teachers = #{teachers,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="createDate != null">
+        create_date = #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="auditDate != null">
+        audit_date = #{auditDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null">
+        `status` = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="charge != null">
+        charge = #{charge,jdbcType=VARCHAR},
+      </if>
+      <if test="price != null">
+        price = #{price,jdbcType=FLOAT},
+      </if>
+      <if test="originalPrice != null">
+        original_price = #{originalPrice,jdbcType=FLOAT},
+      </if>
+      <if test="validDays != null">
+        valid_days = #{validDays,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+</mapper>

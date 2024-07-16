@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="wo1261931780.mapper.CourseMarketMapper">
+  <resultMap id="BaseResultMap" type="wo1261931780.model.po.CourseMarket">
+    <!--@mbg.generated-->
+    <!--@Table course_market-->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="charge" jdbcType="VARCHAR" property="charge" />
+    <result column="price" jdbcType="FLOAT" property="price" />
+    <result column="original_price" jdbcType="FLOAT" property="originalPrice" />
+    <result column="qq" jdbcType="VARCHAR" property="qq" />
+    <result column="wechat" jdbcType="VARCHAR" property="wechat" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="valid_days" jdbcType="INTEGER" property="validDays" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, charge, price, original_price, qq, wechat, phone, valid_days
+  </sql>
+  <insert id="insertOrUpdate" parameterType="wo1261931780.model.po.CourseMarket">
+    <!--@mbg.generated-->
+    insert into course_market
+    (id, charge, price, original_price, qq, wechat, phone, valid_days)
+    values
+    (#{id,jdbcType=BIGINT}, #{charge,jdbcType=VARCHAR}, #{price,jdbcType=FLOAT}, #{originalPrice,jdbcType=FLOAT}, 
+      #{qq,jdbcType=VARCHAR}, #{wechat,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, 
+      #{validDays,jdbcType=INTEGER})
+    on duplicate key update 
+    id = #{id,jdbcType=BIGINT}, 
+    charge = #{charge,jdbcType=VARCHAR}, 
+    price = #{price,jdbcType=FLOAT}, 
+    original_price = #{originalPrice,jdbcType=FLOAT}, 
+    qq = #{qq,jdbcType=VARCHAR}, 
+    wechat = #{wechat,jdbcType=VARCHAR}, 
+    phone = #{phone,jdbcType=VARCHAR}, 
+    valid_days = #{validDays,jdbcType=INTEGER}
+  </insert>
+  <insert id="insertOrUpdateSelective" parameterType="wo1261931780.model.po.CourseMarket">
+    <!--@mbg.generated-->
+    insert into course_market
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="charge != null">
+        charge,
+      </if>
+      <if test="price != null">
+        price,
+      </if>
+      <if test="originalPrice != null">
+        original_price,
+      </if>
+      <if test="qq != null">
+        qq,
+      </if>
+      <if test="wechat != null">
+        wechat,
+      </if>
+      <if test="phone != null">
+        phone,
+      </if>
+      <if test="validDays != null">
+        valid_days,
+      </if>
+    </trim>
+    values
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="charge != null">
+        #{charge,jdbcType=VARCHAR},
+      </if>
+      <if test="price != null">
+        #{price,jdbcType=FLOAT},
+      </if>
+      <if test="originalPrice != null">
+        #{originalPrice,jdbcType=FLOAT},
+      </if>
+      <if test="qq != null">
+        #{qq,jdbcType=VARCHAR},
+      </if>
+      <if test="wechat != null">
+        #{wechat,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null">
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="validDays != null">
+        #{validDays,jdbcType=INTEGER},
+      </if>
+    </trim>
+    on duplicate key update 
+    <trim suffixOverrides=",">
+      <if test="id != null">
+        id = #{id,jdbcType=BIGINT},
+      </if>
+      <if test="charge != null">
+        charge = #{charge,jdbcType=VARCHAR},
+      </if>
+      <if test="price != null">
+        price = #{price,jdbcType=FLOAT},
+      </if>
+      <if test="originalPrice != null">
+        original_price = #{originalPrice,jdbcType=FLOAT},
+      </if>
+      <if test="qq != null">
+        qq = #{qq,jdbcType=VARCHAR},
+      </if>
+      <if test="wechat != null">
+        wechat = #{wechat,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null">
+        phone = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="validDays != null">
+        valid_days = #{validDays,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+</mapper>

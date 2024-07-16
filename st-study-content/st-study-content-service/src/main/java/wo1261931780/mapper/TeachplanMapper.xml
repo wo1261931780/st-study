@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="wo1261931780.mapper.TeachplanMapper">
+  <resultMap id="BaseResultMap" type="wo1261931780.model.po.Teachplan">
+    <!--@mbg.generated-->
+    <!--@Table teachplan-->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="pname" jdbcType="VARCHAR" property="pname" />
+    <result column="parentid" jdbcType="BIGINT" property="parentid" />
+    <result column="grade" jdbcType="SMALLINT" property="grade" />
+    <result column="media_type" jdbcType="VARCHAR" property="mediaType" />
+    <result column="start_time" jdbcType="TIMESTAMP" property="startTime" />
+    <result column="end_time" jdbcType="TIMESTAMP" property="endTime" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+    <result column="timelength" jdbcType="VARCHAR" property="timelength" />
+    <result column="orderby" jdbcType="INTEGER" property="orderby" />
+    <result column="course_id" jdbcType="BIGINT" property="courseId" />
+    <result column="course_pub_id" jdbcType="BIGINT" property="coursePubId" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="is_preview" jdbcType="CHAR" property="isPreview" />
+    <result column="create_date" jdbcType="TIMESTAMP" property="createDate" />
+    <result column="change_date" jdbcType="TIMESTAMP" property="changeDate" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, pname, parentid, grade, media_type, start_time, end_time, description, timelength, 
+    orderby, course_id, course_pub_id, `status`, is_preview, create_date, change_date
+  </sql>
+  <insert id="insertOrUpdate" keyColumn="id" keyProperty="id" parameterType="wo1261931780.model.po.Teachplan" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into teachplan
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      pname,
+      parentid,
+      grade,
+      media_type,
+      start_time,
+      end_time,
+      description,
+      timelength,
+      orderby,
+      course_id,
+      course_pub_id,
+      `status`,
+      is_preview,
+      create_date,
+      change_date,
+    </trim>
+    values
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      #{pname,jdbcType=VARCHAR},
+      #{parentid,jdbcType=BIGINT},
+      #{grade,jdbcType=SMALLINT},
+      #{mediaType,jdbcType=VARCHAR},
+      #{startTime,jdbcType=TIMESTAMP},
+      #{endTime,jdbcType=TIMESTAMP},
+      #{description,jdbcType=VARCHAR},
+      #{timelength,jdbcType=VARCHAR},
+      #{orderby,jdbcType=INTEGER},
+      #{courseId,jdbcType=BIGINT},
+      #{coursePubId,jdbcType=BIGINT},
+      #{status,jdbcType=INTEGER},
+      #{isPreview,jdbcType=CHAR},
+      #{createDate,jdbcType=TIMESTAMP},
+      #{changeDate,jdbcType=TIMESTAMP},
+    </trim>
+    on duplicate key update 
+    <trim suffixOverrides=",">
+      <if test="id != null">
+        id = #{id,jdbcType=BIGINT},
+      </if>
+      pname = #{pname,jdbcType=VARCHAR},
+      parentid = #{parentid,jdbcType=BIGINT},
+      grade = #{grade,jdbcType=SMALLINT},
+      media_type = #{mediaType,jdbcType=VARCHAR},
+      start_time = #{startTime,jdbcType=TIMESTAMP},
+      end_time = #{endTime,jdbcType=TIMESTAMP},
+      description = #{description,jdbcType=VARCHAR},
+      timelength = #{timelength,jdbcType=VARCHAR},
+      orderby = #{orderby,jdbcType=INTEGER},
+      course_id = #{courseId,jdbcType=BIGINT},
+      course_pub_id = #{coursePubId,jdbcType=BIGINT},
+      `status` = #{status,jdbcType=INTEGER},
+      is_preview = #{isPreview,jdbcType=CHAR},
+      create_date = #{createDate,jdbcType=TIMESTAMP},
+      change_date = #{changeDate,jdbcType=TIMESTAMP},
+    </trim>
+  </insert>
+  <insert id="insertOrUpdateSelective" keyColumn="id" keyProperty="id" parameterType="wo1261931780.model.po.Teachplan" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into teachplan
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="pname != null">
+        pname,
+      </if>
+      <if test="parentid != null">
+        parentid,
+      </if>
+      <if test="grade != null">
+        grade,
+      </if>
+      <if test="mediaType != null">
+        media_type,
+      </if>
+      <if test="startTime != null">
+        start_time,
+      </if>
+      <if test="endTime != null">
+        end_time,
+      </if>
+      <if test="description != null">
+        description,
+      </if>
+      <if test="timelength != null">
+        timelength,
+      </if>
+      <if test="orderby != null">
+        orderby,
+      </if>
+      <if test="courseId != null">
+        course_id,
+      </if>
+      <if test="coursePubId != null">
+        course_pub_id,
+      </if>
+      <if test="status != null">
+        `status`,
+      </if>
+      <if test="isPreview != null">
+        is_preview,
+      </if>
+      <if test="createDate != null">
+        create_date,
+      </if>
+      <if test="changeDate != null">
+        change_date,
+      </if>
+    </trim>
+    values
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="pname != null">
+        #{pname,jdbcType=VARCHAR},
+      </if>
+      <if test="parentid != null">
+        #{parentid,jdbcType=BIGINT},
+      </if>
+      <if test="grade != null">
+        #{grade,jdbcType=SMALLINT},
+      </if>
+      <if test="mediaType != null">
+        #{mediaType,jdbcType=VARCHAR},
+      </if>
+      <if test="startTime != null">
+        #{startTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="endTime != null">
+        #{endTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="description != null">
+        #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="timelength != null">
+        #{timelength,jdbcType=VARCHAR},
+      </if>
+      <if test="orderby != null">
+        #{orderby,jdbcType=INTEGER},
+      </if>
+      <if test="courseId != null">
+        #{courseId,jdbcType=BIGINT},
+      </if>
+      <if test="coursePubId != null">
+        #{coursePubId,jdbcType=BIGINT},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="isPreview != null">
+        #{isPreview,jdbcType=CHAR},
+      </if>
+      <if test="createDate != null">
+        #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="changeDate != null">
+        #{changeDate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+    on duplicate key update 
+    <trim suffixOverrides=",">
+      <if test="id != null">
+        id = #{id,jdbcType=BIGINT},
+      </if>
+      <if test="pname != null">
+        pname = #{pname,jdbcType=VARCHAR},
+      </if>
+      <if test="parentid != null">
+        parentid = #{parentid,jdbcType=BIGINT},
+      </if>
+      <if test="grade != null">
+        grade = #{grade,jdbcType=SMALLINT},
+      </if>
+      <if test="mediaType != null">
+        media_type = #{mediaType,jdbcType=VARCHAR},
+      </if>
+      <if test="startTime != null">
+        start_time = #{startTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="endTime != null">
+        end_time = #{endTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="description != null">
+        description = #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="timelength != null">
+        timelength = #{timelength,jdbcType=VARCHAR},
+      </if>
+      <if test="orderby != null">
+        orderby = #{orderby,jdbcType=INTEGER},
+      </if>
+      <if test="courseId != null">
+        course_id = #{courseId,jdbcType=BIGINT},
+      </if>
+      <if test="coursePubId != null">
+        course_pub_id = #{coursePubId,jdbcType=BIGINT},
+      </if>
+      <if test="status != null">
+        `status` = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="isPreview != null">
+        is_preview = #{isPreview,jdbcType=CHAR},
+      </if>
+      <if test="createDate != null">
+        create_date = #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="changeDate != null">
+        change_date = #{changeDate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+</mapper>
