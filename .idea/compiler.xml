@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+    <option name="USE_RELEASE_OPTION" value="false" />
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
@@ -24,12 +25,12 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="st-base-study" options="-parameters" />
-      <module name="st-study-content" options="-parameters" />
-      <module name="st-study-content-api" options="-parameters" />
-      <module name="st-study-content-model" options="-parameters" />
-      <module name="st-study-content-service" options="-parameters" />
-      <module name="st-study-parent" options="-parameters" />
+      <module name="st-base-study" options="" />
+      <module name="st-study-content" options="" />
+      <module name="st-study-content-api" options="" />
+      <module name="st-study-content-model" options="" />
+      <module name="st-study-content-service" options="" />
+      <module name="st-study-parent" options="" />
     </option>
   </component>
 </project>

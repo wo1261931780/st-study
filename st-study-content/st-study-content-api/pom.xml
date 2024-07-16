@@ -7,6 +7,7 @@
 		<groupId>wo1261931780</groupId>
 		<artifactId>st-study-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
+		<!--<relativePath>../../st-study-parent/pom.xml</relativePath>、-->
 		<relativePath>../../st-study-parent/pom.xml</relativePath>
 		
 	</parent>
@@ -20,6 +21,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<dependencies>
+
 		<dependency>
 			<groupId>wo1261931780</groupId>
 			<artifactId>st-study-content-service</artifactId>
@@ -36,6 +38,8 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+
+
 		<!-- 排除 Spring Boot 依赖的日志包冲突 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -62,12 +66,6 @@
 			<groupId>com.spring4all</groupId>
 			<artifactId>swagger-spring-boot-starter</artifactId>
 			<version>1.9.0.RELEASE</version>
-		</dependency>
-		<!--临时设置一下依赖-->
-		<dependency>
-			<groupId>wo1261931780</groupId>
-			<artifactId>st-base-study</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 
