@@ -7,9 +7,8 @@
 		<artifactId>st-study-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 		<!--基于 pom.xml 定义的 parent 项目-->
-		<!--<relativePath>../pom.xml</relativePath>-->
+		<relativePath>../st-study-parent</relativePath>
 	</parent>
-	<groupId>wo1261931780</groupId>
 	<artifactId>st-base-study</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>st-base-study</name>
