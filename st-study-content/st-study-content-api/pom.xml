@@ -9,7 +9,7 @@
 		<version>0.0.1-SNAPSHOT</version>
 		<!--<relativePath>../../st-study-parent/pom.xml</relativePath>、-->
 		<relativePath>../../st-study-parent/pom.xml</relativePath>
-		
+
 	</parent>
 
 	<artifactId>st-study-content-api</artifactId>
@@ -27,7 +27,6 @@
 			<artifactId>st-study-content-service</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-
 		<!--cloud的基础环境包-->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>

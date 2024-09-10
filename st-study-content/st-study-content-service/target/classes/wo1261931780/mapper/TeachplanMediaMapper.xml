@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="wo1261931780.mapper.TeachplanMediaMapper">
+  <resultMap id="BaseResultMap" type="wo1261931780.model.po.TeachplanMedia">
+    <!--@mbg.generated-->
+    <!--@Table teachplan_media-->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="media_id" jdbcType="VARCHAR" property="mediaId" />
+    <result column="teachplan_id" jdbcType="BIGINT" property="teachplanId" />
+    <result column="course_id" jdbcType="BIGINT" property="courseId" />
+    <result column="media_fileName" jdbcType="VARCHAR" property="mediaFilename" />
+    <result column="create_date" jdbcType="TIMESTAMP" property="createDate" />
+    <result column="create_people" jdbcType="VARCHAR" property="createPeople" />
+    <result column="change_people" jdbcType="VARCHAR" property="changePeople" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, media_id, teachplan_id, course_id, media_fileName, create_date, create_people, 
+    change_people
+  </sql>
+  <insert id="insertOrUpdate" keyColumn="id" keyProperty="id" parameterType="wo1261931780.model.po.TeachplanMedia" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into teachplan_media
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      media_id,
+      teachplan_id,
+      course_id,
+      media_fileName,
+      create_date,
+      create_people,
+      change_people,
+    </trim>
+    values
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      #{mediaId,jdbcType=VARCHAR},
+      #{teachplanId,jdbcType=BIGINT},
+      #{courseId,jdbcType=BIGINT},
+      #{mediaFilename,jdbcType=VARCHAR},
+      #{createDate,jdbcType=TIMESTAMP},
+      #{createPeople,jdbcType=VARCHAR},
+      #{changePeople,jdbcType=VARCHAR},
+    </trim>
+    on duplicate key update 
+    <trim suffixOverrides=",">
+      <if test="id != null">
+        id = #{id,jdbcType=BIGINT},
+      </if>
+      media_id = #{mediaId,jdbcType=VARCHAR},
+      teachplan_id = #{teachplanId,jdbcType=BIGINT},
+      course_id = #{courseId,jdbcType=BIGINT},
+      media_fileName = #{mediaFilename,jdbcType=VARCHAR},
+      create_date = #{createDate,jdbcType=TIMESTAMP},
+      create_people = #{createPeople,jdbcType=VARCHAR},
+      change_people = #{changePeople,jdbcType=VARCHAR},
+    </trim>
+  </insert>
+  <insert id="insertOrUpdateSelective" keyColumn="id" keyProperty="id" parameterType="wo1261931780.model.po.TeachplanMedia" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into teachplan_media
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="mediaId != null">
+        media_id,
+      </if>
+      <if test="teachplanId != null">
+        teachplan_id,
+      </if>
+      <if test="courseId != null">
+        course_id,
+      </if>
+      <if test="mediaFilename != null">
+        media_fileName,
+      </if>
+      <if test="createDate != null">
+        create_date,
+      </if>
+      <if test="createPeople != null">
+        create_people,
+      </if>
+      <if test="changePeople != null">
+        change_people,
+      </if>
+    </trim>
+    values
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="mediaId != null">
+        #{mediaId,jdbcType=VARCHAR},
+      </if>
+      <if test="teachplanId != null">
+        #{teachplanId,jdbcType=BIGINT},
+      </if>
+      <if test="courseId != null">
+        #{courseId,jdbcType=BIGINT},
+      </if>
+      <if test="mediaFilename != null">
+        #{mediaFilename,jdbcType=VARCHAR},
+      </if>
+      <if test="createDate != null">
+        #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createPeople != null">
+        #{createPeople,jdbcType=VARCHAR},
+      </if>
+      <if test="changePeople != null">
+        #{changePeople,jdbcType=VARCHAR},
+      </if>
+    </trim>
+    on duplicate key update 
+    <trim suffixOverrides=",">
+      <if test="id != null">
+        id = #{id,jdbcType=BIGINT},
+      </if>
+      <if test="mediaId != null">
+        media_id = #{mediaId,jdbcType=VARCHAR},
+      </if>
+      <if test="teachplanId != null">
+        teachplan_id = #{teachplanId,jdbcType=BIGINT},
+      </if>
+      <if test="courseId != null">
+        course_id = #{courseId,jdbcType=BIGINT},
+      </if>
+      <if test="mediaFilename != null">
+        media_fileName = #{mediaFilename,jdbcType=VARCHAR},
+      </if>
+      <if test="createDate != null">
+        create_date = #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createPeople != null">
+        create_people = #{createPeople,jdbcType=VARCHAR},
+      </if>
+      <if test="changePeople != null">
+        change_people = #{changePeople,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+</mapper>

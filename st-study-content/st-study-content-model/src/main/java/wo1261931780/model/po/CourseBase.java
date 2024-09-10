@@ -1,9 +1,6 @@
 package wo1261931780.model.po;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
@@ -124,7 +121,7 @@ public class CourseBase implements Serializable {
     /**
      * 修改时间
      */
-    @TableField(value = "change_date")
+    @TableField(value = "change_date",fill = FieldFill.INSERT_UPDATE)
     @ApiModelProperty(value="修改时间")
     private Date changeDate;
 

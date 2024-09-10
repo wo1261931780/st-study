@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="wo1261931780.mapper.CourseBaseMapper">
+  <resultMap id="BaseResultMap" type="wo1261931780.model.po.CourseBase">
+    <!--@mbg.generated-->
+    <!--@Table course_base-->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="company_id" jdbcType="BIGINT" property="companyId" />
+    <result column="company_name" jdbcType="VARCHAR" property="companyName" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="users" jdbcType="VARCHAR" property="users" />
+    <result column="tags" jdbcType="VARCHAR" property="tags" />
+    <result column="mt" jdbcType="VARCHAR" property="mt" />
+    <result column="st" jdbcType="VARCHAR" property="st" />
+    <result column="grade" jdbcType="VARCHAR" property="grade" />
+    <result column="teachmode" jdbcType="VARCHAR" property="teachmode" />
+    <result column="description" jdbcType="LONGVARCHAR" property="description" />
+    <result column="pic" jdbcType="VARCHAR" property="pic" />
+    <result column="create_date" jdbcType="TIMESTAMP" property="createDate" />
+    <result column="change_date" jdbcType="TIMESTAMP" property="changeDate" />
+    <result column="create_people" jdbcType="VARCHAR" property="createPeople" />
+    <result column="change_people" jdbcType="VARCHAR" property="changePeople" />
+    <result column="audit_status" jdbcType="VARCHAR" property="auditStatus" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, company_id, company_name, `name`, users, tags, mt, st, grade, teachmode, description, 
+    pic, create_date, change_date, create_people, change_people, audit_status, `status`
+  </sql>
+  <insert id="insertOrUpdate" keyColumn="id" keyProperty="id" parameterType="wo1261931780.model.po.CourseBase" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into course_base
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      company_id,
+      company_name,
+      `name`,
+      users,
+      tags,
+      mt,
+      st,
+      grade,
+      teachmode,
+      description,
+      pic,
+      create_date,
+      change_date,
+      create_people,
+      change_people,
+      audit_status,
+      `status`,
+    </trim>
+    values
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      #{companyId,jdbcType=BIGINT},
+      #{companyName,jdbcType=VARCHAR},
+      #{name,jdbcType=VARCHAR},
+      #{users,jdbcType=VARCHAR},
+      #{tags,jdbcType=VARCHAR},
+      #{mt,jdbcType=VARCHAR},
+      #{st,jdbcType=VARCHAR},
+      #{grade,jdbcType=VARCHAR},
+      #{teachmode,jdbcType=VARCHAR},
+      #{description,jdbcType=LONGVARCHAR},
+      #{pic,jdbcType=VARCHAR},
+      #{createDate,jdbcType=TIMESTAMP},
+      #{changeDate,jdbcType=TIMESTAMP},
+      #{createPeople,jdbcType=VARCHAR},
+      #{changePeople,jdbcType=VARCHAR},
+      #{auditStatus,jdbcType=VARCHAR},
+      #{status,jdbcType=VARCHAR},
+    </trim>
+    on duplicate key update 
+    <trim suffixOverrides=",">
+      <if test="id != null">
+        id = #{id,jdbcType=BIGINT},
+      </if>
+      company_id = #{companyId,jdbcType=BIGINT},
+      company_name = #{companyName,jdbcType=VARCHAR},
+      `name` = #{name,jdbcType=VARCHAR},
+      users = #{users,jdbcType=VARCHAR},
+      tags = #{tags,jdbcType=VARCHAR},
+      mt = #{mt,jdbcType=VARCHAR},
+      st = #{st,jdbcType=VARCHAR},
+      grade = #{grade,jdbcType=VARCHAR},
+      teachmode = #{teachmode,jdbcType=VARCHAR},
+      description = #{description,jdbcType=LONGVARCHAR},
+      pic = #{pic,jdbcType=VARCHAR},
+      create_date = #{createDate,jdbcType=TIMESTAMP},
+      change_date = #{changeDate,jdbcType=TIMESTAMP},
+      create_people = #{createPeople,jdbcType=VARCHAR},
+      change_people = #{changePeople,jdbcType=VARCHAR},
+      audit_status = #{auditStatus,jdbcType=VARCHAR},
+      `status` = #{status,jdbcType=VARCHAR},
+    </trim>
+  </insert>
+  <insert id="insertOrUpdateSelective" keyColumn="id" keyProperty="id" parameterType="wo1261931780.model.po.CourseBase" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into course_base
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="companyId != null">
+        company_id,
+      </if>
+      <if test="companyName != null">
+        company_name,
+      </if>
+      <if test="name != null">
+        `name`,
+      </if>
+      <if test="users != null">
+        users,
+      </if>
+      <if test="tags != null">
+        tags,
+      </if>
+      <if test="mt != null">
+        mt,
+      </if>
+      <if test="st != null">
+        st,
+      </if>
+      <if test="grade != null">
+        grade,
+      </if>
+      <if test="teachmode != null">
+        teachmode,
+      </if>
+      <if test="description != null">
+        description,
+      </if>
+      <if test="pic != null">
+        pic,
+      </if>
+      <if test="createDate != null">
+        create_date,
+      </if>
+      <if test="changeDate != null">
+        change_date,
+      </if>
+      <if test="createPeople != null">
+        create_people,
+      </if>
+      <if test="changePeople != null">
+        change_people,
+      </if>
+      <if test="auditStatus != null">
+        audit_status,
+      </if>
+      <if test="status != null">
+        `status`,
+      </if>
+    </trim>
+    values
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="companyId != null">
+        #{companyId,jdbcType=BIGINT},
+      </if>
+      <if test="companyName != null">
+        #{companyName,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="users != null">
+        #{users,jdbcType=VARCHAR},
+      </if>
+      <if test="tags != null">
+        #{tags,jdbcType=VARCHAR},
+      </if>
+      <if test="mt != null">
+        #{mt,jdbcType=VARCHAR},
+      </if>
+      <if test="st != null">
+        #{st,jdbcType=VARCHAR},
+      </if>
+      <if test="grade != null">
+        #{grade,jdbcType=VARCHAR},
+      </if>
+      <if test="teachmode != null">
+        #{teachmode,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null">
+        #{description,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="pic != null">
+        #{pic,jdbcType=VARCHAR},
+      </if>
+      <if test="createDate != null">
+        #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="changeDate != null">
+        #{changeDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createPeople != null">
+        #{createPeople,jdbcType=VARCHAR},
+      </if>
+      <if test="changePeople != null">
+        #{changePeople,jdbcType=VARCHAR},
+      </if>
+      <if test="auditStatus != null">
+        #{auditStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=VARCHAR},
+      </if>
+    </trim>
+    on duplicate key update 
+    <trim suffixOverrides=",">
+      <if test="id != null">
+        id = #{id,jdbcType=BIGINT},
+      </if>
+      <if test="companyId != null">
+        company_id = #{companyId,jdbcType=BIGINT},
+      </if>
+      <if test="companyName != null">
+        company_name = #{companyName,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        `name` = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="users != null">
+        users = #{users,jdbcType=VARCHAR},
+      </if>
+      <if test="tags != null">
+        tags = #{tags,jdbcType=VARCHAR},
+      </if>
+      <if test="mt != null">
+        mt = #{mt,jdbcType=VARCHAR},
+      </if>
+      <if test="st != null">
+        st = #{st,jdbcType=VARCHAR},
+      </if>
+      <if test="grade != null">
+        grade = #{grade,jdbcType=VARCHAR},
+      </if>
+      <if test="teachmode != null">
+        teachmode = #{teachmode,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null">
+        description = #{description,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="pic != null">
+        pic = #{pic,jdbcType=VARCHAR},
+      </if>
+      <if test="createDate != null">
+        create_date = #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="changeDate != null">
+        change_date = #{changeDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createPeople != null">
+        create_people = #{createPeople,jdbcType=VARCHAR},
+      </if>
+      <if test="changePeople != null">
+        change_people = #{changePeople,jdbcType=VARCHAR},
+      </if>
+      <if test="auditStatus != null">
+        audit_status = #{auditStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        `status` = #{status,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+</mapper>

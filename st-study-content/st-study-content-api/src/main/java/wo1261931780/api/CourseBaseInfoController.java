@@ -29,14 +29,14 @@ public class CourseBaseInfoController {
 	// RestController就相当于 controller 和 responseBody
 	@ApiOperation("课程查询接口")
 	@PostMapping("/course/list")
-	public PageResult<CourseBase> list(PageParams pageParams, @RequestBody QueryCourseParamsDto queryCourseParams) {
+	public PageResult<CourseBase> list(PageParams pageParams, @RequestBody(required = false) QueryCourseParamsDto queryCourseParams) {
 		// 作为一个专业的开发，要先写持久层代码，然后再写业务层
 		CourseBase courseBase = new CourseBase();
 		courseBase.setName("测试名称");
 		courseBase.setCreateDate(new Date());
 		List<CourseBase> courseBases = new ArrayList<>();
 		courseBases.add(courseBase);
-		PageResult<CourseBase> courseBasePageResult = new PageResult<>();
+		PageResult<CourseBase> courseBasePageResult = new PageResult<>(courseBases,10,1,10);
 		// courseBasePageResult.setCode(0);
 		// courseBasePageResult.setMsg("success");
 		// courseBasePageResult.setData(courseBase);
