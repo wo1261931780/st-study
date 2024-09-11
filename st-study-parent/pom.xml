@@ -26,7 +26,10 @@
     <developers>
         <developer/>
     </developers>
-    <scm>
+	<modules>
+		<!--<module>st-study-system</module>-->
+	</modules>
+	<scm>
         <connection/>
         <developerConnection/>
         <tag/>
