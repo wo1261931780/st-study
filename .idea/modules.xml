@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/st-base-study/st-base-study.iml" filepath="$PROJECT_DIR$/st-base-study/st-base-study.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/st-study.iml" filepath="$PROJECT_DIR$/.idea/st-study.iml" />
+      <module fileurl="file://$PROJECT_DIR$/st-study-content/st-study-content-api/st-study-content-api.iml" filepath="$PROJECT_DIR$/st-study-content/st-study-content-api/st-study-content-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/st-study-content/st-study-content-model/st-study-content-model.iml" filepath="$PROJECT_DIR$/st-study-content/st-study-content-model/st-study-content-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/st-study-content/st-study-content-service/st-study-content-service.iml" filepath="$PROJECT_DIR$/st-study-content/st-study-content-service/st-study-content-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/st-study-system/st-study-system-api/st-study-system-api.iml" filepath="$PROJECT_DIR$/st-study-system/st-study-system-api/st-study-system-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/st-study-system/st-study-system-model/st-study-system-model.iml" filepath="$PROJECT_DIR$/st-study-system/st-study-system-model/st-study-system-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/st-study-system/st-study-system-service/st-study-system-service.iml" filepath="$PROJECT_DIR$/st-study-system/st-study-system-service/st-study-system-service.iml" />
     </modules>
   </component>
 </project>
