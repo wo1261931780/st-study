@@ -1,0 +1,13 @@
+###
+POST {{content_host}}/course/list
+Content-Type: application/json
+
+{
+  "auditStatus" : "202004",
+  "courseName" : "java",
+  "publishStatus" : ""
+}
+
+###
+POST http://localhost:8080/course/list
+Content-Type: application/jsont

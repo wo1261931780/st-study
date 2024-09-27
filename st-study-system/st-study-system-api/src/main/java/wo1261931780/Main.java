@@ -22,3 +22,4 @@ public class Main {
 		SpringApplication.run(Main.class, args);
 	}
 }
+// 浏览器直接访问服务是跨域，但是访问nginx是可以的，我们用nginx去做代理，然后nginx去访问服务端就可以
