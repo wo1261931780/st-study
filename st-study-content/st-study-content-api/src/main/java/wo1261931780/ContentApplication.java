@@ -21,3 +21,4 @@ public class ContentApplication {
 		// 放在外面，会把包和子包都扫描到，避免出现问题
 	}
 }
+// 分类表一定有一个父节点id
