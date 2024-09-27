@@ -4,11 +4,13 @@ import baseRun.model.PageParams;
 import baseRun.model.PageResult;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import wo1261931780.model.dto.QueryCourseParamsDto;
 import wo1261931780.model.po.CourseBase;
+import wo1261931780.service.CourseBaseInfoService;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -26,6 +28,11 @@ import java.util.List;
 @Api(value = "课程基本信息", tags = {"课程基本信息接口"})
 @RestController
 public class CourseBaseInfoController {
+
+	@Autowired
+	private CourseBaseInfoService courseBaseInfoService;
+
+
 	// RestController就相当于 controller 和 responseBody
 	@ApiOperation("课程查询接口")
 	@PostMapping("/course/list")
@@ -36,7 +43,7 @@ public class CourseBaseInfoController {
 		courseBase.setCreateDate(new Date());
 		List<CourseBase> courseBases = new ArrayList<>();
 		courseBases.add(courseBase);
-		PageResult<CourseBase> courseBasePageResult = new PageResult<>(courseBases,10,1,10);
+		PageResult<CourseBase> courseBasePageResult = new PageResult<>(courseBases, 10, 1, 10);
 		// courseBasePageResult.setCode(0);
 		// courseBasePageResult.setMsg("success");
 		// courseBasePageResult.setData(courseBase);
