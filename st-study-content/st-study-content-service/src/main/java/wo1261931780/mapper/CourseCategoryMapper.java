@@ -2,7 +2,10 @@ package wo1261931780.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
+import wo1261931780.model.dto.CourseCategoryDTO;
 import wo1261931780.model.po.CourseCategory;
+
+import java.util.List;
 
 /**
 *Created by Intellij IDEA.
@@ -18,4 +21,6 @@ public interface CourseCategoryMapper extends BaseMapper<CourseCategory> {
     int insertOrUpdate(CourseCategory record);
 
     int insertOrUpdateSelective(CourseCategory record);
+
+    public List<CourseCategoryDTO> selectTreeNodes();
 }
