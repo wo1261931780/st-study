@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="SCEPTTr">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/SCEPTTr.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
