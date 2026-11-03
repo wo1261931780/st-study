@@ -46,18 +46,18 @@
         <spring-cloud-alibaba.version>2.2.6.RELEASE</spring-cloud-alibaba.version>
         <org.projectlombok.version>1.18.8</org.projectlombok.version>
         <javax.servlet-api.version>4.0.1</javax.servlet-api.version>
-        <fastjson.version>1.2.83</fastjson.version>
+        <fastjson.version>1.2.84</fastjson.version>
         <druid-spring-boot-starter.version>1.2.8</druid-spring-boot-starter.version>
         <mysql-connector-java.version>8.0.30</mysql-connector-java.version>
         <mybatis-plus-boot-starter.version>3.4.1</mybatis-plus-boot-starter.version>
         <commons-lang.version>2.6</commons-lang.version>
-        <minio.version>8.4.3</minio.version>
-        <xxl-job-core.version>2.3.1</xxl-job-core.version>
+        <minio.version>8.6.0</minio.version>
+        <xxl-job-core.version>3.2.0</xxl-job-core.version>
         <swagger-annotations.version>1.5.20</swagger-annotations.version>
-        <commons-lang3.version>3.10</commons-lang3.version>
-        <okhttp.version>4.8.1</okhttp.version>
+        <commons-lang3.version>3.18.0</commons-lang3.version>
+        <okhttp.version>4.9.2</okhttp.version>
         <swagger-spring-boot-starter.version>1.9.0.RELEASE</swagger-spring-boot-starter.version>
-        <elasticsearch.version>7.17.23</elasticsearch.version>
+        <elasticsearch.version>7.17.25</elasticsearch.version>
     </properties>
     <dependencies>
 
@@ -165,7 +165,7 @@
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
-                <version>32.0.0-jre</version>
+                <version>33.7.1-jre</version>
             </dependency>
             <!--分布式任务调度-->
             <dependency>
